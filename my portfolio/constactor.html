@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center; color: cadetblue;">Student result</h2>
+
+    <form action="">
+        <fieldset>
+            <caption>Entey shukhi info</caption>
+            <br>
+            <br>
+            <input placeholder="enter name" type="text" name="" id="n">
+            <br>
+            <br>
+            <input placeholder="enter bng sub mark" type="number" name="" id="n1">
+            <br>
+            <br>
+            <input placeholder="enter math sub mark" type="number" name="" id="n2">
+            <br>
+            <br>
+            <button type="button" onclick="shukhi()">
+                store
+            </button>
+            <button type="button" onclick="shukhishow()">show</button>
+
+        </fieldset>
+        <br>
+        <br>
+        <span id="r"></span>
+
+
+    </form>
+    <script>
+        function ab(name,eng,math){
+            this.n = name;
+            this.e = eng;
+            this.i = math;
+
+            this.tn = function(){
+                return this.n +" er total mark=" + (this.e + this.i);
+            };
+        }
+
+        var st1;
+
+        function shukhi(){
+            var x = document.getElementById('n').value;
+            var y = parseInt(document.getElementById('n1').value);
+            var z = parseInt(document.getElementById('n2').value);
+
+            st1 = new ab(x,y,z);
+            window.alert('store done');
+        }
+         function shukhishow(){
+            var res = document.getElementById('r');
+            res.innerHTML= st1.tn();
+         }
+
+    </script>
+    <form action="">
+        <fieldset>
+            <caption>Entry purni info</caption>
+            <br>
+            <br>
+            <input type="text" id="p" placeholder="enter name">
+            <br>
+            <br>
+            <input type="number" id="p1" placeholder="enter bng sub mark">
+            <br>
+            <br>
+            <input type="number" id="p2" placeholder="enter math sub mark">
+            <br>
+            <br>
+            <button type="button" onclick="pu()">
+                store
+            </button>
+            <button type="button" onclick="pushow()">show</button>
+        </fieldset>
+        <br>
+        <br>
+        <span id="r2"></span>
+    </form>
+    <script>
+        function xy(name,eng,math){
+            this.a=name;
+            this.b=eng;
+            this.c=math;
+
+            this.tm = function(){
+                return this.a+"er total mark="+(this.b+this.c);
+            };
+        }
+
+        var st2;
+
+        function pu(){
+            var e = document.getElementById('p').value;
+            var f = parseInt(document.getElementById('p1').value);
+            var g = parseInt(document.getElementById('p2').value);
+
+            st2 = new xy(e,f,g);
+            window.alert('store done');
+        }
+
+        function pushow(){
+            var res = document.getElementById('r2');
+            res.innerHTML=st2 .tm();
+        }
+    </script>
+
+    <form action="">
+        <fieldset>
+            <caption>enter sumi info</caption>
+            <br>
+            <br>
+            <input type="text" id="pp" placeholder="enter name">
+            <br>
+            <br>
+            <input type="number" id="pp1" placeholder="enter bng sub mark">
+            <br>
+            <br> 
+            <input type="number" id="pp2" placeholder="enter math sub mark">
+            <br>
+            <br>
+            <button type="button" onclick="su()">store</button>
+        
+            <button type="button" onclick="sushow()">show</button>
+            <br>
+            <br>
+            <span id="r4"></span>
+
+        </fieldset>
+    </form>
+    <script>
+        function cc(name,eng,math){
+            this.x = name;
+            this.y = eng;
+            this.z = math;
+             this.ab = function(){
+                return this.x+"er total mark="+(this.y+this.z);
+             };
+        }
+          
+        var st3;
+
+        function su(){
+            var a = document.getElementById('pp').value;
+            var b = parseInt(document.getElementById('pp1').value);
+            var c = parseInt(document.getElementById('pp2').value);
+
+            st3 = new cc(a,b,c);
+            window.alert('store down');
+
+        }
+
+        function sushow(){
+            var res = document.getElementById('r4');
+            res.innerHTML=st3.ab();
+        }
+    </script>
+</body>
+</html>
